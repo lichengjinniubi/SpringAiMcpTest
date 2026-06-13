@@ -1,0 +1,47 @@
+server:
+  port: 8003
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+
+
+spring:
+  application:
+    name: mcp
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: weather-sse-server
+        version: 1.0.0
+        type: SYNC
+        capabilities:
+          tool: true
+          resource: false
+          prompt: false
+          completion: false
+        sse-message-endpoint: /mcp/messages   # 客户端发送消息的HTTP endpoint ("写信发消息")
+        sse-endpoint: /sse                    # 客户端订阅SSE的endpoint （"听收音机"）
+
+
+  ##///////////Stdio 模式需要的配置/////////////
+#  main:
+#    web-application-type: none
+#    banner-mode: off
+#
+#  ai:
+#    mcp:
+#      server:
+#        name: mcp-server
+#        version: 1.0.0
+#        stdio: true
+#        enabled: true
+#        type: SYNC
+#
+#
+#logging:
+#  level:
+#    root: OFF
