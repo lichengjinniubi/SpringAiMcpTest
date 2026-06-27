@@ -22,6 +22,7 @@
 
 	<modules>
 		<module>mcp</module>
+		<module>mcp-client</module>
 	</modules>
 
 	<dependencyManagement>

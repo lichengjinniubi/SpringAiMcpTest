@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "weather-sse": {
-      "url": "http://127.0.0.1:8003/sse"
+      "url": "http://127.0.0.1:8003/api/mcp"
     }
   }
 }

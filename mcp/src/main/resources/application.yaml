@@ -51,6 +51,7 @@ spring:
     mcp:
       server:
         ## 这个地方改成STATELESS，就是无状态模式
+        ## protocol: STREAMABLE
         protocol: STREAMABLE
         name: streamable-mcp-server
         version: 1.0.0
