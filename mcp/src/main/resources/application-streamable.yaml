@@ -1,0 +1,11 @@
+spring:
+  ai:
+    mcp:
+      server:
+        protocol: STREAMABLE
+        resource-change-notification: true
+        tool-change-notification: true
+        prompt-change-notification: true
+        streamable-http:
+          mcp-endpoint: /api/mcp
+          keep-alive-interval: 30s

@@ -1,0 +1,7 @@
+spring:
+  ai:
+    mcp:
+      server:
+        protocol: SSE
+        sse-message-endpoint: /mcp/messages
+        sse-endpoint: /sse

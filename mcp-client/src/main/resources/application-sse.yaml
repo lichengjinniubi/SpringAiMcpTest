@@ -1,0 +1,8 @@
+spring:
+  ai:
+    mcp:
+      client:
+        sse:
+          connections:
+            weather-sse:
+              url: http://127.0.0.1:8003/sse

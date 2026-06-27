@@ -1,68 +1,19 @@
 server:
   port: 8003
 
-
-
-# SSE配置
-#spring:
-#  application:
-#    name: mcp
-#  ai:
-#    mcp:
-#      server:
-#        enabled: true
-#        name: weather-sse-server
-#        version: 1.0.0
-#        type: SYNC
-#        capabilities:
-#          tool: true
-#          resource: false
-#          prompt: false
-#          completion: false
-#        sse-message-endpoint: /mcp/messages   # 客户端发送消息的HTTP endpoint ("写信发消息")
-#        sse-endpoint: /sse                    # 客户端订阅SSE的endpoint （"听收音机"）
-
-
-  ##///////////Stdio 模式需要的配置/////////////
-#  main:
-#    web-application-type: none
-#    banner-mode: off
-#
-#  ai:
-#    mcp:
-#      server:
-#        name: mcp-server
-#        version: 1.0.0
-#        stdio: true
-#        enabled: true
-#        type: SYNC
-#
-#
-#logging:
-#  level:
-#    root: OFF
-
-
-
 spring:
+  profiles:
+    active: streamable
   application:
-    name: mcp-weather-streamable
+    name: mcp-weather-server
   ai:
     mcp:
       server:
-        ## 这个地方改成STATELESS，就是无状态模式
-        ## protocol: STREAMABLE
-        protocol: STREAMABLE
-        name: streamable-mcp-server
+        enabled: true
+        name: weather-mcp-server
         version: 1.0.0
         type: SYNC
         instructions: "这个服务是用来查询城市天气的。"
-        resource-change-notification: true
-        tool-change-notification: true
-        prompt-change-notification: true
-        streamable-http:
-          mcp-endpoint: /api/mcp
-          keep-alive-interval: 30s
   servlet:
     encoding:
       charset: UTF-8

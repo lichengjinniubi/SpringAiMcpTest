@@ -1,0 +1,9 @@
+spring:
+  ai:
+    mcp:
+      client:
+        streamable-http:
+          connections:
+            weather-streamable:
+              url: http://127.0.0.1:8003
+              endpoint: /api/mcp

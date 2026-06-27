@@ -2,6 +2,8 @@ server:
   port: 8004
 
 spring:
+  profiles:
+    active: streamable
   application:
     name: mcp-client
   ai:
@@ -12,8 +14,3 @@ spring:
         version: 1.0.0
         request-timeout: 60s
         type: SYNC
-        streamable-http:
-          connections:
-            weather-streamable:
-              url: http://127.0.0.1:8003
-              endpoint: /api/mcp

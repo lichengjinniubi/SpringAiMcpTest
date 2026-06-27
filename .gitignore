@@ -31,3 +31,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Claude Code ###
+.claude/superpowers/
+.claude/settings.json
+.claude/settings.local.json
