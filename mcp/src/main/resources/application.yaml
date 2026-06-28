@@ -1,15 +1,9 @@
 server:
   port: 8003
-  ssl:
-    enabled: true
-    key-store: classpath:keystore.p12
-    key-store-type: PKCS12
-    key-store-password: 123456
-    key-alias: local-ssl
 
 spring:
   profiles:
-    active: sse
+    active: see
   application:
     name: mcp-weather-server
   ai:
