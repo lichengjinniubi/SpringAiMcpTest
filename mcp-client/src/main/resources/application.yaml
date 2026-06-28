@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: streamable
+    active: sse
   application:
     name: mcp-client
   ai:
