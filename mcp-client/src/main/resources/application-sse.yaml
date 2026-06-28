@@ -6,6 +6,6 @@ spring:
           connections:
             weather-sse:
               url: https://127.0.0.1:8003/sse
-  app:
-    mcp:
-      insecure-ssl: true
+app:
+  mcp:
+    insecure-ssl: true

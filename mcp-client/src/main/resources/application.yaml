@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: sse
+    active: sse,https
   application:
     name: mcp-client
   ai:
